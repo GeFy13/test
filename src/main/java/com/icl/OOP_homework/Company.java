@@ -3,6 +3,7 @@ package com.icl.OOP_homework;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -27,7 +28,6 @@ public class Company {
 	}
 
 	@OneToMany(mappedBy = "company")
-	@Cascade(org.hibernate.annotations.CascadeType.ALL)
 	private List<Employee> employeeList;
 
 	@Column(name = "income")

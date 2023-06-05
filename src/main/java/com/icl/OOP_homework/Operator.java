@@ -1,21 +1,30 @@
 package com.icl.OOP_homework;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "operators")
 public class Operator implements Employee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
+
+	@Override
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public Company getCompany() {
+		return company;
+	}
 
 	@Column(name = "stavka")
 	private int wage_rate;
 
-	@ManyToOne
-	@JoinColumn(name = "company_id")
+	@Transient
 	private Company company;
 
 	@Override

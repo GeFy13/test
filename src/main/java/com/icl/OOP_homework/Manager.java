@@ -1,15 +1,21 @@
 package com.icl.OOP_homework;
 
 import javax.persistence.*;
+import java.io.Serial;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "managers")
 public class Manager implements Employee{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
+
+	@Override
+	public int getId() {
+		return id;
+	}
 
 	@Column(name = "stavka")
 	private int wage_rate;
@@ -20,8 +26,12 @@ public class Manager implements Employee{
 	@Column(name = "income")
 	private int unit_income;
 
-	@ManyToOne
-	@JoinColumn(name = "company_id")
+	@Override
+	public Company getCompany() {
+		return company;
+	}
+
+	@Transient
 	private Company company;
 
 	@Override

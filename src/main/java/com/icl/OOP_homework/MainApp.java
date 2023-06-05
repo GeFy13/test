@@ -14,6 +14,7 @@ public class MainApp {
 				.addAnnotatedClass(Manager.class)
 				.addAnnotatedClass(Operator.class)
 				.addAnnotatedClass(TopManager.class)
+				.addAnnotatedClass(Employee.class)
 				.buildSessionFactory();
 
 
