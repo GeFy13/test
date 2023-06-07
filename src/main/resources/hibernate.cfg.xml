@@ -17,6 +17,8 @@
       <property name="show_sql">true</property>
 
       <property name="current_session_context_class">thread</property>
-      <!--<property name="hibernate.hbm2ddl.auto">none</property>-->
+      <property name="hibernate.hbm2ddl.auto">update</property>
+
+<!--      <mapping com.icl.OOP_homework.Company>-->
   </session-factory>
 </hibernate-configuration>
