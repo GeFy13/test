@@ -31,7 +31,7 @@ public class Employee {
 	}
 
 	enum Type {
-		MANAGER, TOPMANAGER, OPERATOR;
+		MANAGER, TOPMANAGER, OPERATOR
 	}
 
 	public Employee(Type type) {
